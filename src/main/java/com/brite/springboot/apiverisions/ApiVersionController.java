@@ -33,26 +33,26 @@ public class ApiVersionController {
 
     @GetMapping(path="/api",headers = "X-API-VERSION=1")
     public @ResponseBody ApiVersion apiversion1header(){
-        return new ApiVersion("v1.0","apiversion");
+        return new ApiVersion("v1.0","apiversion using headers =X-API-VERSION=1");
     }
 
 
     @GetMapping(path="/api",headers = "X-API-VERSION=2")
     public @ResponseBody ApiVersion apiversion2header(){
-        return new ApiVersion("v2.0","apiversion");
+        return new ApiVersion("v2.0","apiversion using headers =X-API-VERSION=2");
     }
 
 
 
-    @GetMapping(path="/api",produces = "application/vnd.companyname.app-v1+json")
+    @GetMapping(path="/api",produces = "application/vnd.company.app-v1+json")
     public @ResponseBody ApiVersion apiversion1produce(){
-        return new ApiVersion("v1.0","apiversion");
+        return new ApiVersion("v1.0","apiversion using produce =\"+\"application//vnd.company.app-v1+json\"");
     }
 
 
-    @GetMapping(path="/api",produces = "application/vnd.companyname.app-v2+json")
+    @GetMapping(path="/api",produces = "application/vnd.company.app-v2+json")
     public @ResponseBody ApiVersion apiversion2produce(){
-        return new ApiVersion("v2.0","apiversion");
+        return new ApiVersion("v2.0","apiversion using produce =\"+\"application//vnd.company.app-v2+json\"");
     }
 
 
