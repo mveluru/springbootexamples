@@ -1,0 +1,17 @@
+server:
+  port:
+    8082
+  servlet:
+    context-path: /product
+spring:
+  active:
+    profile: dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env,metrics,heapdump
+user:
+  baseurl: http://localhost:8080/veluru
+
+
